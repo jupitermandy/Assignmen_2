@@ -1,0 +1,87 @@
+Metadata-Version: 1.1
+Name: loadcsv
+Version: 0.5
+Summary: Load a csv file into a database
+Home-page: https://bitbucket.org/ferranp/loadcsv
+Author: Ferran Pegueroles Forcadell
+Author-email: ferran@pegueroles.com
+License: GPL
+Download-URL: https://bitbucket.org/ferranp/loadcsv/downloads
+Description: .. -*- restructuredtext -*-
+        
+        ====================
+         README for loadcsv
+        ====================
+         
+        *loadcsv* is a programa and a library to load CSV files to databases and for 
+        converting CSV files to SQL inserrt or update statements.
+        
+        The utility gets the names of the columns from the first row of the CSV file. 
+        
+        I wrote this utility because I was tired of doing always small scripts for 
+        doing this kind os loads.
+        
+        By now the utility suport MySQL, PostgresSQL and sqlite, but can be used with 
+        other SQL databases using the utility to generate the SQL statements and sending 
+        them to the database::
+        
+        
+           Usage: loadcsv [options] filename.csv
+           If no database provided, display SQL to stdout
+        
+           Options::
+             -h, --help            show this help message and exit
+             -D DRIVER, --driver=DRIVER
+                                   database driver mysql, pgsql, sqlite
+             -H HOSTNAME, --hostname=HOSTNAME
+                                   database server hostname,defaults to localhost
+             -d DBNAME, --dbname=DBNAME
+                                   database name (filename on sqlite)
+             -u USER, --user=USER  database username
+             -p PASSWORD, --password=PASSWORD
+                                   database password
+             -P PORT, --port=PORT  database port
+             -t TABLE, --table=TABLE
+                                   database table to load
+             --test                run text, do no commit to the database
+             --delimiter=DELIMITER
+                                   CSV file field delimiter, by default semi-colon
+        
+        
+        he project code and bugtracker is hosted on 
+        `Bitbucket <http://bitbucket.org/ferranp/loadcsv/>`_. 
+        
+        Install
+        =======
+        
+        Using pip::
+        
+            pip install loadcsv
+        
+        Os download and use ``setup`` ::
+        
+            python setup.py install
+        
+        
+        Links
+        =====
+        
+         * `Project site <http://bitbucket.org/ferranp/loadcsv/>`_. 
+         * `Freshmeat project page  <http://http://freshmeat.net/projects/loadcsv>`_. 
+         * `Python package index page <http://pypi.python.org/pypi/loadcsv>`_. 
+        
+        
+        
+        
+Platform: linux
+Platform: windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database
+Classifier: Topic :: Utilities
+Classifier: Topic :: Text Processing
